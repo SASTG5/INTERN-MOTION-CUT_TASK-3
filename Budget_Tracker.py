@@ -1,16 +1,17 @@
-#!/usr/bin/env python
-# coding: utf-8
+#by SASHANG UMANATH S
+#on 14.2.2024
+#for MOTION CUT INTERN
+####################################################   QUIZ APP(TKINTER)   #########################################################
 
-# In[ ]:
-
+#####################################################      code start     ###########################################################
 
 from datetime import datetime
-
+#defining class
 class BudgetTracker:
     def __init__(self):
         self.transactions = []
         self.load_data()
-
+#defining functions
     def load_data(self):
         try:
             with open('budget_data.txt', 'r') as file:
@@ -63,6 +64,7 @@ class BudgetTracker:
             print(f"{formatted_date} | {transaction['category']} | {transaction['amount']} | {transaction['type']}")
         self.display_spending_trends()
 
+#defining main function
 def main():
     budget_tracker = BudgetTracker()
 
@@ -96,7 +98,7 @@ def main():
 if __name__ == "__main__":
     main()
 
-
+########################################################     code end     #############################################################
 # In[ ]:
 
 
